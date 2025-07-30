@@ -8,6 +8,33 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    <p id="notice"><%= notice %></p> 
+    <p> 
+    <strong>Name:</strong> 
+    <%= @user.name %> 
+    </p>
+    <p> 
+    <strong>Email:</strong> 
+    <%= @user.email %>
+    </p> 
+    <p> 
+    <strong>Created_at:</strong> 
+    <%= @user.created_at %> 
+    </p> 
+    <p> 
+    <strong>Updated_at:</strong> 
+    <%= @user.updated_at %> 
+    </p> 
+    <p> 
+    <% @user.microposts %> 
+    <% @user.microposts.each do |user| %> 
+      <ul> 
+      <li><%= user.content %></td> 
+      </ul> 
+      <% end %> 
+      </p> 
+      <%= link_to 'Edit', edit_user_path(@user) %> | 
+      <%= link_to 'Back', users_path %> 
   end
 
   # GET /users/new
