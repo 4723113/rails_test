@@ -28,6 +28,6 @@
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
-
+  <%= link_to "New Micropost", new_micropost_path(user_id: @user.id) %>
   <%= button_to "Destroy this user", @user, method: :delete %>
 </div>
