@@ -15,7 +15,6 @@ class MicropostsTest < ApplicationSystemTestCase
     click_on "New micropost"
 
     fill_in "Content", with: @micropost.content
-    fill_in "Id", with: @micropost.id
     fill_in "User", with: @micropost.user_id
     click_on "Create Micropost"
 
@@ -28,7 +27,6 @@ class MicropostsTest < ApplicationSystemTestCase
     click_on "Edit this micropost", match: :first
 
     fill_in "Content", with: @micropost.content
-    fill_in "Id", with: @micropost.id
     fill_in "User", with: @micropost.user_id
     click_on "Update Micropost"
 

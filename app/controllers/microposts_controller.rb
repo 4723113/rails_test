@@ -65,6 +65,6 @@ class MicropostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def micropost_params
-      params.expect(micropost: [ :id, :content, :user_id ])
+      params.expect(micropost: [ :content, :user_id ])
     end
 end
