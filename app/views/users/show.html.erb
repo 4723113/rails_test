@@ -1,7 +1,30 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @user %>
-
+   <p id="notice"><%= notice %></p> 
+    <p> 
+    <strong>Name:</strong> 
+    <%= @user.name %> 
+    </p>
+    <p> 
+    <strong>Email:</strong> 
+    <%= @user.email %>
+    </p> 
+    <p> 
+    <strong>Created_at:</strong> 
+    <%= @user.created_at %> 
+    </p> 
+    <p> 
+    <strong>Updated_at:</strong> 
+    <%= @user.updated_at %> 
+    </p> 
+    <p> 
+    <% @user.microposts %> 
+    <% @user.microposts.each do |user| %> 
+      <ul> 
+      <li><%= user.content %></td> 
+      </ul> 
+      <% end %> 
+      </p> 
+      <%= link_to 'Edit', edit_user_path(@user) %> | 
+      <%= link_to 'Back', users_path %> 
 <div>
   <%= link_to "Edit this user", edit_user_path(@user) %> |
   <%= link_to "Back to users", users_path %>
